@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" />
+    <title>Car treatment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://code.jquery.com/jquery-3.1.1.js">
+    <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="css/editor.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jqc-1.12.4/moment-2.18.1/dt-1.10.18/b-1.5.6/sl-1.3.0/datatables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/bootstrap-table@1.14.2/dist/bootstrap-table.min.js"></script>
+</head>
+<body>
+        <nav class="navbar navbar-togglseable-md navbar-light bg-faded fixed-top " style="background-color: rgb(253, 252, 251)" id="page_nav">
+                <a href="/addtreatment" class="navbar-brand  mx-auto" >
+                    <div class="vipTarderFxLogo"  ><span>Add-Treatment</span>
+                    </a>
+                        <a href="/deletetreatment" class="navbar-brand  mx-auto" >
+                            <div class="vipTarderFxLogo"  ><span>Delete-Treatment</span>
+                    </div>
+                </div>
+                </a>
+            </a>
+            <a href="/" class="navbar-brand  mx-auto" >
+                <div class="vipTarderFxLogo"  ><span>Logout</span> 
+                </div>
+            </a>   
+            </nav>
+        <div class="container">
+                
+                <div class="row" id="contact">
+                        <div class="col-sm-5 ">
+                                
+                    <br><br><br>
+                    
+                   
+                     
+                <div class="container1"  >
+                        <div class=row>
+                                <div class="col-md-12 col-sm-12"  >
+                        <form id="table"  method="post" onsubmit="return true" >
+        
+                            <div class="header">
+                                <h1>Garage-editTreatment</h1>
+                            </div>
+            
+                                <br>
+                                <h1></h1>
+                            <div class="input-container">
+                                    <i class="fa fa-road icon" aria-hidden="true"></i>
+                                    <input class="input-field" type="text" id="number" placeholder="Edit By Number Of Treatment(numbers)" name="number" pattern = "[0-9]{1,10}" required>
+                          
+        
+                                </div>
+                                <br>
+                                <div class="input-container">
+                                        <i class="fa fa-user icon"></i>
+                                        <input class="input-field" type="text" id="carname" placeholder="car modal(letters)" name="carname" pattern="[A-Za-z]{1,10}" required>
+                                    </div>
+                                    <br>
+                            <div class="input-container">
+                                <i class="fa fa-user icon"></i>
+                                <input class="input-field" type="text" id="name"  placeholder="Customer name(letters)" name="name" pattern="[A-Za-z]{1,30}" required>
+                            </div>
+                            <br>
+        
+                            <div class="input-container">
+                                <i class="fa fa-envelope icon"></i>
+                                <input class="input-field" name="id" id="id" input class="input-container" placeholder="id(letters)"
+                                    type="text" placeholder="" pattern="[0-9]{1,10}" required
+                                    >
+                            </div>
+                            <br>
+                            <div class="input-container">
+                                    <i class="fa fa-road icon"></i>
+                                    <input class="input-field" name="status" id="status"  input class="input-container" pattern="[A-Za-z]{1,30}"placeholder="status(letters)"
+                                        type="text" placeholder="" required
+                                        >
+                                </div>
+                
+                                <br><br>
+                                <button type="Submit" class="btn right login_btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" col-sm-7" >
+            <div class="container2" style="margin-top: 16%" >
+                <div class="row">
+                    <div class="col-md-12 col-sm-12" >
+                                                        <h3> Garage-Treatments</h3>
+                                                        <br>
+                                                        <h3> Edit Treatment Using The Left Form Insert Number Value and Edit The rest!</h3> 
+                                                        <br>  
+                                                        <h3> Search&Set Entries Below As Well As Sort columns! </h3> 
+                                                        <br>  
+                        <table id="datatable" class="table table-bordered table-hover">
+                               
+                                    <thead>
+                                            <div class=row>
+                                                    <div class="col-md-12 col-sm-12 ">
+                                        <tr>
+                                            
+                                            <th>Number</th>
+                                            <th>Carname</th>
+                                            <th>Name</th>
+                                            <th>Id</th>
+                                            <th>Status</th> 
+                                          
+                                        </tr>
+                                        <br><br> <br>
+                                    </div>
+                                </div> 
+                                    </thead>
+                               
+                        </table>     
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-sm-2 "></div>
+    </div>
+</div>
+        <script
+                    src="http://code.jquery.com/jquery-3.2.1.min.js"
+                    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                    crossorigin="anonymous"></script>
+                    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+                    <script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    var table = $("#datatable").DataTable({
+                        "ordering": true,
+                        "searching": true,
+                        "paging": true,
+                        "scrollY": 200,
+                        "columnDefs": [
+                            {
+                                "targets": 0,
+                                "searchable": true,
+                                "visible": true,
+                                "order": [[0, "asc"]]
+                            }
+                         ] ,
+                         
+                         columns: [
+                             
+                              { data: "number"},
+                              {data: "Carname"},
+                              {data: "Customer"},
+                              {data: "Id"},
+                              {data: "Status" },
+                            
+                                
+                        ],         
+                    });
+            $.ajax({
+            url: '/work',
+            method: 'get',
+            dataType: 'json',
+            success:function(data) {
+                  table.clear().draw();
+                  table.rows.add(data).draw();
+              }
+            });
+           
+        });
+        
+            </script>
+            <footer class="footer center" style="text-align:center;background-color: rgb(253, 252, 251)" >
+        <p>Is Something Not Working? Mail us:: <a href="mailto:testlocakhost@gmail.com">support@asgarage.com</a></p>
+        <p>© 2019 A-S--->Garage.  All rights reserved</p>
+  
+      </footer>
+        </body>
+        </html>   
