@@ -1,6 +1,5 @@
 ﻿# A-S-Garage
  
- Heroku:https://ariksapp.herokuapp.com
  
  full site run by npm start in folder
  
