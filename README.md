@@ -1,7 +1,7 @@
 ﻿# A-S-Garage
  
  
- full site run by npm start in folder
+Full site run by npm start in folder
  
  
  -	Client-side development used: HTML5, bootstrap, JavaScript(jQuery). 
